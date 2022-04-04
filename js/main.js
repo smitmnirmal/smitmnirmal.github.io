@@ -350,14 +350,12 @@
                     method: "POST",
                     url: "https://formspree.io/f/mwkynyrk",
                     cors: true,
-                    secure: true,
                     headers: {
                         'Access-Control-Allow-Origin': '*',
                     },
                     data: $(form).serialize(),
                     beforeSend: function (xhr) {
                         sLoader.slideDown("slow");
-                        xhr.setRequestHeader ("Authorization", "Basic " + btoa(""));
                     },
                     success: function() {
                         sLoader.slideUp("slow"); 
