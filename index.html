@@ -3,25 +3,47 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="theme-color" content="#07080f">
+  <meta name="theme-color" content="#020617">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Smit Nirmal — Software Engineer</title>
   <meta name="description"
     content="Smit Nirmal — Full Stack Software Engineer & Co-founder of SplitNSave. Building scalable products across web, mobile, and cloud.">
   <meta name="author" content="Smit Nirmal">
   <link rel="icon" href="images/SN-logo.PNG" type="image/png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500&display=swap"
-    rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="portfolio.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
 </head>
 
 <body>
 
-  <canvas id="particles-canvas"></canvas>
+  <!-- TOPO HERO & FILM GRAIN -->
+  <canvas id="topo-canvas"></canvas>
+  <div class="film-grain"></div>
+
+  <!-- CSS 3D LAPTOP ANIMATION (HALIDE PARALLAX) -->
+  <div class="hc-container">
+    <div class="hc-3d" id="hc-3d">
+      <div class="hc-base">
+        <div class="hc-keyboard"></div>
+        <div class="hc-trackpad"></div>
+      </div>
+      <div class="hc-lid">
+        <div class="hc-screen">
+          <div class="hc-code">
+            <span class="hc-keyword">const</span> developer = {<br />
+            &nbsp;&nbsp;name: <span class="hc-string">"Smit Nirmal"</span>,<br />
+            &nbsp;&nbsp;role: <span class="hc-string">"Full Stack Engineer"</span>,<br />
+            &nbsp;&nbsp;skills: [<span class="hc-string">"Java"</span>, <span class="hc-string">"React"</span>, <span
+              class="hc-string">"AWS"</span>],<br />
+            &nbsp;&nbsp;status: <span class="hc-string">"Building"</span><br />
+            };
+          </div>
+          <div class="hc-glare"></div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- NAV -->
   <nav id="navbar">
@@ -39,119 +61,73 @@
 
   <!-- HERO -->
   <section id="hero">
-    <div class="glow-orb orb-1"></div>
-    <div class="glow-orb orb-2"></div>
-    <div class="hero-inner">
-      <div class="hero-tag"><span class="dot"></span>status: open_to_work &amp;&amp; building_in_prod</div>
-      <h1 class="hero-h1">Smit Nirmal<br><span class="gradient">Software Engineer</span></h1>
-      <div class="hero-typed-wrap">
-        <span id="typed-text"></span><span class="cursor-blink">|</span>
-      </div>
-      <p class="hero-sub">Full Stack Engineer & Co-founder building scalable products across web, mobile, and cloud.</p>
+    <div class="hero-content motion-el">
+      <div class="hero-tag"><span class="dot"></span> open_to_work &amp;&amp; building_in_prod</div>
+      <h1 class="hero-h1">Smit Nirmal<br><span class="gradient-text">Software Engineer</span></h1>
+      <p class="hero-sub">Full Stack Engineer & Co-founder building highly scalable products across web, mobile, and
+        cloud infrastructures.</p>
       <div class="hero-btns">
         <a href="#projects" class="btn-primary">View My Work</a>
         <a href="documents/Resume-Smit.pdf" target="_blank" class="btn-outline"><i class="fa-solid fa-file-arrow-down"
-            style="margin-right:6px"></i>Resume</a>
+            style="margin-right:8px"></i>Resume</a>
       </div>
       <div class="hero-social">
         <a href="https://linkedin.com/in/smitnirmal" target="_blank" aria-label="LinkedIn"><i
             class="fa-brands fa-linkedin-in"></i></a>
-        <a href="https://github.com/smitnirmal3597" target="_blank" aria-label="GitHub"><i
+        <a href="https://github.com/smitmnirmal" target="_blank" aria-label="GitHub"><i
             class="fa-brands fa-github"></i></a>
         <a href="https://splitnsave.app" target="_blank" aria-label="SplitNSave"><i
             class="fa-solid fa-arrow-up-right-from-square"></i></a>
         <a href="mailto:smitmnirmal@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
       </div>
     </div>
-    <div class="scroll-indicator">
+    <div class="scroll-indicator motion-el">
       <span>scroll</span>
       <div class="scroll-line"></div>
     </div>
   </section>
 
-  <!-- ABOUT -->
+  <!-- ABOUT (BENTO BOX) -->
   <section id="about">
     <div class="section-wrapper">
-      <div class="reveal">
+      <div class="motion-el">
         <p class="section-label">// about me</p>
-        <h2 class="section-title">Crafting <span>Experiences</span></h2>
-        <div class="section-sep"></div>
+        <h2 class="section-title">Crafting <span class="gradient-text">Experiences</span></h2>
       </div>
-      <div class="about-grid">
-        <div class="about-text reveal">
-          <p>I'm a <strong>Full Stack Software Engineer</strong> with 5+ years of experience designing and shipping
+
+      <div class="bento-grid" id="bento-container">
+        <!-- Bio -->
+        <div class="bento-card bento-bio bento-item"
+          style="display: flex; flex-direction: column; justify-content: center;">
+          <h3>Hi, I'm Smit.</h3>
+          <p>I'm a <strong>Full Stack Software Engineer</strong> with over 5 years of experience designing and shipping
             production-grade applications across web, mobile, and cloud platforms.</p>
-          <p>Currently working in <strong>New York</strong>, I co-founded <strong>SplitNSave</strong> — a cross-platform
-            expense splitting app built for groups. I thrive at the intersection of clean architecture and delightful
-            user experiences.</p>
-          <p>Strong command of <strong>Java, Kotlin, TypeScript, Node.js, React Native, Angular</strong>, and cloud
-            infrastructure. I care deeply about code quality, developer experience, and building things that last.</p>
-          <div class="about-tags">
-            <span class="tag">TypeScript</span><span class="tag">Node.js</span><span class="tag">React Native</span>
-            <span class="tag">Angular</span><span class="tag">Java</span><span class="tag">Kotlin</span>
-            <span class="tag">PostgreSQL</span><span class="tag">Docker</span><span class="tag">AWS</span>
-            <span class="tag">Redis</span><span class="tag">GraphQL</span><span class="tag">CI/CD</span>
+          <p>I co-founded <strong>SplitNSave</strong>, a cross-platform expense splitting app, and I thrive at the
+            intersection of clean architecture and delightful user experiences. I care deeply about code quality,
+            developer experience, and building things that last.</p>
+
+          <div style="display: flex; gap: 1rem; margin-top: 1.5rem; flex-wrap: wrap;">
+            <div
+              style="background: rgba(255,255,255,0.05); padding: 0.6rem 1.2rem; border-radius: 12px; border: 1px solid var(--border); display: flex; align-items: center; gap: 0.8rem; font-weight: 500;">
+              <i class="fa-solid fa-code" style="color: var(--accent); font-size: 1.2rem;"></i> 5+ Years Exp.
+            </div>
+            <div
+              style="background: rgba(255,255,255,0.05); padding: 0.6rem 1.2rem; border-radius: 12px; border: 1px solid var(--border); display: flex; align-items: center; gap: 0.8rem; font-weight: 500;">
+              <i class="fa-solid fa-location-dot" style="color: var(--accent-2); font-size: 1.2rem;"></i> New York, NY
+            </div>
           </div>
         </div>
-        <div class="skills-col reveal">
-          <p class="skills-heading">Tech Stack</p>
-          <div class="skill-categories">
-            <div class="skill-cat cat-lang">
-              <div class="skill-cat-title"><span class="cat-dot"></span>Languages</div>
-              <div class="skill-pills">
-                <span class="skill-pill">Java</span>
-                <span class="skill-pill">Kotlin</span>
-                <span class="skill-pill">TypeScript</span>
-                <span class="skill-pill">JavaScript</span>
-                <span class="skill-pill">Python</span>
-                <span class="skill-pill">C#</span>
-                <span class="skill-pill">SQL</span>
-              </div>
-            </div>
-            <div class="skill-cat cat-fe">
-              <div class="skill-cat-title"><span class="cat-dot"></span>Frontend</div>
-              <div class="skill-pills">
-                <span class="skill-pill">Angular</span>
-                <span class="skill-pill">React</span>
-                <span class="skill-pill">HTML5 / CSS3</span>
-                <span class="skill-pill">RxJS</span>
-                <span class="skill-pill">NgRx</span>
-              </div>
-            </div>
-            <div class="skill-cat cat-be">
-              <div class="skill-cat-title"><span class="cat-dot"></span>Backend</div>
-              <div class="skill-pills">
-                <span class="skill-pill">Node.js</span>
-                <span class="skill-pill">Express</span>
-                <span class="skill-pill">Spring Boot</span>
-                <span class="skill-pill">REST APIs</span>
-                <span class="skill-pill">GraphQL</span>
-                <span class="skill-pill">PostgreSQL</span>
-                <span class="skill-pill">MongoDB</span>
-                <span class="skill-pill">Redis</span>
-              </div>
-            </div>
-            <div class="skill-cat cat-mob">
-              <div class="skill-cat-title"><span class="cat-dot"></span>Mobile</div>
-              <div class="skill-pills">
-                <span class="skill-pill">React Native</span>
-                <span class="skill-pill">Expo</span>
-                <span class="skill-pill">Android (Java)</span>
-                <span class="skill-pill">Ionic</span>
-              </div>
-            </div>
-            <div class="skill-cat cat-cloud">
-              <div class="skill-cat-title"><span class="cat-dot"></span>Cloud &amp; DevOps</div>
-              <div class="skill-pills">
-                <span class="skill-pill">AWS</span>
-                <span class="skill-pill">Azure</span>
-                <span class="skill-pill">Docker</span>
-                <span class="skill-pill">Nginx</span>
-                <span class="skill-pill">CI/CD</span>
-                <span class="skill-pill">PM2</span>
-              </div>
-            </div>
+
+        <!-- Gravity Skills -->
+        <div class="bento-card bento-gravity bento-item"
+          style="grid-column: span 2; grid-row: span 2; padding: 0; overflow: hidden; position: relative; min-height: 400px;">
+          <div
+            style="position: absolute; top: 2rem; left: 0; right: 0; text-align: center; z-index: 2; pointer-events: none;">
+            <i class="fa-solid fa-cubes skill-icon"
+              style="font-size:1.8rem; margin-bottom: 0.8rem; color: var(--accent-3);"></i>
+            <h4 style="font-size:1.5rem; font-family:'Space Grotesk'; font-weight:700;">Tech Stack</h4>
           </div>
+          <div id="gravity-canvas-container" style="width: 100%; height: 100%; position: absolute; inset: 0;"></div>
         </div>
       </div>
     </div>
@@ -160,194 +136,216 @@
   <!-- EXPERIENCE -->
   <section id="experience">
     <div class="section-wrapper">
-      <div class="reveal">
+      <div class="motion-el">
         <p class="section-label">// career</p>
-        <h2 class="section-title">Work <span>Experience</span></h2>
-        <div class="section-sep"></div>
+        <h2 class="section-title">Work <span class="gradient-text">Experience</span></h2>
       </div>
-      <div class="exp-grid">
-        <div>
-          <p class="exp-col-label">Industry</p>
-          <div class="timeline">
-            <div class="tl-item">
-              <div class="tl-dot"></div>
-              <div class="tl-company">Egen</div>
-              <div class="tl-role">Senior Software Engineer</div>
-              <div class="tl-date">May 2022 — Present · New York, NY</div>
-              <div class="tl-desc">Leading full-stack development of enterprise-scale applications. Architecting
-                microservices, building cloud-native solutions, and mentoring junior engineers.</div>
-              <div class="tl-badges"><span class="tl-badge">TypeScript</span><span class="tl-badge">Node.js</span><span
-                  class="tl-badge">Angular</span><span class="tl-badge">AWS</span></div>
-            </div>
-            <div class="tl-item">
-              <div class="tl-dot" style="background:var(--accent2);box-shadow:0 0 8px var(--accent2)"></div>
-              <div class="tl-company">BDO Canada</div>
-              <div class="tl-role">Software Consultant</div>
-              <div class="tl-date">March 2021 — May 2022 · Toronto, ON</div>
-              <div class="tl-desc">Delivered custom software solutions for enterprise clients. Built scalable backends
-                and modern frontends aligned with business goals.</div>
-              <div class="tl-badges"><span class="tl-badge">Java</span><span class="tl-badge">Spring Boot</span><span
-                  class="tl-badge">Angular</span></div>
-            </div>
-            <div class="tl-item">
-              <div class="tl-dot" style="background:var(--accent3);box-shadow:0 0 8px var(--accent3)"></div>
-              <div class="tl-company">Ontario Teachers' Pension Plan</div>
-              <div class="tl-role">Programmer Analyst — Intern</div>
-              <div class="tl-date">Jan 2020 — Aug 2020 · Toronto, ON</div>
-              <div class="tl-desc">Developed internal tools and automated reporting pipelines, reducing manual
-                processing time significantly.</div>
-              <div class="tl-badges"><span class="tl-badge">Java</span><span class="tl-badge">SQL</span></div>
-            </div>
-            <div class="tl-item">
-              <div class="tl-dot"></div>
-              <div class="tl-company">Bidja Innovations Inc.</div>
-              <div class="tl-role">Software Developer (Part-time)</div>
-              <div class="tl-date">Jan 2019 — Dec 2019</div>
-              <div class="tl-desc">Built mobile and web features for a startup product.</div>
-              <div class="tl-badges"><span class="tl-badge">Android</span><span class="tl-badge">Java</span></div>
-            </div>
-            <div class="tl-item">
-              <div class="tl-dot" style="background:var(--accent2);box-shadow:0 0 8px var(--accent2)"></div>
-              <div class="tl-company">VeerKrupa Infotechs</div>
-              <div class="tl-role">Android Developer Intern</div>
-              <div class="tl-date">Jan 2018 — Apr 2018</div>
-              <div class="tl-desc">Developed Android applications and gained hands-on mobile engineering experience.
+
+      <div class="exp-accordion" id="exp-accordion">
+
+        <!-- American Express -->
+        <div class="exp-panel active">
+          <div class="exp-glow"
+            style="background: radial-gradient(circle at center, rgba(0, 111, 207, 0.2), transparent 70%);"></div>
+          <div class="exp-collapsed-view">
+            <img src="logo/amex-logo.svg" class="exp-icon-img" alt="Amex Logo">
+            <h3 class="exp-vert-title">Amex</h3>
+          </div>
+          <div class="exp-expanded-view">
+            <div class="exp-header">
+              <div class="exp-title-wrapper">
+                <h3 class="exp-company">American Express</h3>
+                <p class="exp-role">Engineer II</p>
               </div>
-              <div class="tl-badges"><span class="tl-badge">Android</span><span class="tl-badge">Java</span></div>
+              <div class="exp-date">Dec 2025 — Present · New York, NY</div>
+            </div>
+            <div class="exp-details">
+              <p>Architecting and developing a scalable event-driven notification platform to manage subscription
+                lifecycles and deliver real-time webhooks. Leveraging AI-assisted tools like GitHub Copilot for code
+                generation, architecture ideation, and automated testing to accelerate engineering productivity.</p>
+              <div class="tl-badges">
+                <span class="tl-badge">Kotlin</span><span class="tl-badge">Ktor</span>
+                <span class="tl-badge">React</span><span class="tl-badge">PostgreSQL</span>
+                <span class="tl-badge">AWS</span><span class="tl-badge">Datadog</span>
+              </div>
             </div>
           </div>
         </div>
-        <div>
-          <p class="exp-col-label">Education</p>
-          <div class="timeline">
-            <div class="tl-item">
-              <div class="tl-dot"></div>
-              <div class="tl-company">University of Windsor</div>
-              <div class="tl-role">Master of Applied Computing</div>
-              <div class="tl-date">Jan 2019 — Aug 2020 · Windsor, Canada</div>
+
+        <!-- Egen -->
+        <div class="exp-panel">
+          <div class="exp-glow"
+            style="background: radial-gradient(circle at center, rgba(16, 185, 129, 0.2), transparent 70%);"></div>
+          <div class="exp-collapsed-view">
+            <img src="logo/egen-logo.jpg" class="exp-icon-img" alt="Egen Logo">
+            <h3 class="exp-vert-title">Egen</h3>
+          </div>
+          <div class="exp-expanded-view">
+            <div class="exp-header">
+              <div class="exp-title-wrapper">
+                <h3 class="exp-company">Egen</h3>
+                <p class="exp-role">Senior Software Engineer</p>
+              </div>
+              <div class="exp-date">May 2022 — Nov 2025 · Remote</div>
             </div>
-            <div class="tl-item">
-              <div class="tl-dot" style="background:var(--accent2);box-shadow:0 0 12px var(--accent2)"></div>
-              <div class="tl-company">Ganpat University</div>
-              <div class="tl-role">B.Tech, Computer Engineering</div>
-              <div class="tl-date">Aug 2014 — May 2018 · India</div>
+            <div class="exp-details">
+              <p>Led full-stack development of enterprise-scale applications. Optimized distributed caching to improve
+                API efficiency by 15% and reduced system load by 20%. Architected microservices and mentored junior
+                engineers.</p>
+              <div class="tl-badges">
+                <span class="tl-badge">Java</span><span class="tl-badge">Spring Boot</span>
+                <span class="tl-badge">Vue.js</span><span class="tl-badge">Kafka</span>
+                <span class="tl-badge">PostgreSQL</span>
+              </div>
             </div>
           </div>
         </div>
+
+        <!-- BDO Canada -->
+        <div class="exp-panel">
+          <div class="exp-glow"
+            style="background: radial-gradient(circle at center, rgba(239, 68, 68, 0.2), transparent 70%);"></div>
+          <div class="exp-collapsed-view">
+            <img src="logo/bdo-logo.svg" class="exp-icon-img" alt="BDO Logo">
+            <h3 class="exp-vert-title">BDO</h3>
+          </div>
+          <div class="exp-expanded-view">
+            <div class="exp-header">
+              <div class="exp-title-wrapper">
+                <h3 class="exp-company">BDO Canada</h3>
+                <p class="exp-role">Software Consultant</p>
+              </div>
+              <div class="exp-date">Mar 2021 — May 2022 · Toronto, ON</div>
+            </div>
+            <div class="exp-details">
+              <p>Delivered custom software solutions for enterprise clients. Built scalable backends and modern
+                frontends aligned with business goals while ensuring robust security and performance.</p>
+              <div class="tl-badges">
+                <span class="tl-badge">C#</span><span class="tl-badge">.NET Core</span>
+                <span class="tl-badge">Angular</span><span class="tl-badge">Azure DevOps</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- OTPP -->
+        <div class="exp-panel">
+          <div class="exp-glow"
+            style="background: radial-gradient(circle at center, rgba(168, 85, 247, 0.2), transparent 70%);"></div>
+          <div class="exp-collapsed-view">
+            <img src="logo/otpp-logo.jpg" class="exp-icon-img" alt="OTPP Logo">
+            <h3 class="exp-vert-title">OTPP</h3>
+          </div>
+          <div class="exp-expanded-view">
+            <div class="exp-header">
+              <div class="exp-title-wrapper">
+                <h3 class="exp-company">Ontario Teachers'</h3>
+                <p class="exp-role">Programmer Analyst — Intern</p>
+              </div>
+              <div class="exp-date">Jan 2020 — Aug 2020 · Toronto, ON</div>
+            </div>
+            <div class="exp-details">
+              <p>Developed and containerized microservices using Angular, ASP.NET, and Python, orchestrated via Docker
+                and Kubernetes. Built internal tools reducing manual processing time significantly.</p>
+              <div class="tl-badges">
+                <span class="tl-badge">Angular</span><span class="tl-badge">Python</span>
+                <span class="tl-badge">Docker</span><span class="tl-badge">Kubernetes</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
+
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const panels = document.querySelectorAll('.exp-panel');
+          panels.forEach(panel => {
+            const makeActive = () => {
+              panels.forEach(p => p.classList.remove('active'));
+              panel.classList.add('active');
+            };
+            panel.addEventListener('click', makeActive);
+            panel.addEventListener('mouseenter', makeActive);
+          });
+        });
+      </script>
     </div>
   </section>
 
   <!-- PROJECTS -->
   <section id="projects">
     <div class="section-wrapper">
-      <div class="reveal">
+      <div class="motion-el">
         <p class="section-label">// portfolio</p>
-        <h2 class="section-title">Featured <span>Projects</span></h2>
-        <div class="section-sep"></div>
+        <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
       </div>
-      <div class="projects-grid">
+
+      <div class="projects-grid" id="projects-container">
 
         <!-- FEATURED: SplitNSave -->
-        <div class="project-card featured reveal">
+        <div class="project-card featured proj-item">
           <div>
-            <div class="feat-badge"><span class="dot"></span>Co-founded · Live in Production</div>
-            <div class="project-title" style="font-size:1.5rem">SplitNSave</div>
+            <div class="feat-badge"><span class="dot"></span>Co-founded · Live</div>
+            <div class="project-title">SplitNSave</div>
             <div class="project-desc">A cross-platform expense splitting app built for groups — roommates, trips,
               events. Features real-time sync, smart settlement logic, push notifications, and a seamless onboarding
-              experience. Available on iOS, Android, and Web.</div>
-            <div class="project-stack">
-              <span class="stack-tag">React Native</span><span class="stack-tag">Expo</span>
-              <span class="stack-tag">TypeScript</span><span class="stack-tag">Node.js</span>
-              <span class="stack-tag">PostgreSQL</span><span class="stack-tag">Docker</span>
-              <span class="stack-tag">Nginx</span><span class="stack-tag">AWS</span>
+              experience.</div>
+            <div class="tl-badges" style="margin-bottom: 2rem;">
+              <span class="tl-badge">React Native</span><span class="tl-badge">TypeScript</span>
+              <span class="tl-badge">Node.js</span><span class="tl-badge">PostgreSQL</span>
+              <span class="tl-badge">AWS</span>
             </div>
             <div class="project-links">
-              <a href="https://splitnsave.app" target="_blank" class="proj-link btn-primary"
-                style="font-size:.82rem;padding:.55rem 1.2rem">
+              <a href="https://splitnsave.app" target="_blank" class="btn-glass">
                 <i class="fa-solid fa-arrow-up-right-from-square"></i> Visit App
               </a>
-            </div><!-- end exp-grid -->
+            </div>
           </div>
-          <div class="feat-visual">
-            <div class="feat-visual-inner">
-              <div class="feat-app-name">SplitNSave</div>
-              <div class="feat-app-sub">Smart expense splitting for groups</div>
-              <div class="feat-app-badges">
-                <span class="feat-app-badge badge-ios"><i class="fa-brands fa-apple"></i> iOS</span>
-                <span class="feat-app-badge badge-android"><i class="fa-brands fa-android"></i> Android</span>
-                <span class="feat-app-badge badge-web"><i class="fa-solid fa-globe"></i> Web</span>
+          <div class="featured-visual">
+            <div class="app-mock">
+              <h4>SplitNSave</h4>
+              <p>Smart expense splitting</p>
+              <div class="app-badges">
+                <span class="app-badge"><i class="fa-brands fa-apple"></i> iOS</span>
+                <span class="app-badge"><i class="fa-brands fa-android"></i> Android</span>
               </div>
             </div>
           </div>
         </div>
 
         <!-- Push Notifications SNS -->
-        <div class="project-card reveal">
-          <div style="font-size:1.8rem;margin-bottom:.8rem">🔔</div>
-          <div class="project-title">Push Notifications via Amazon SNS</div>
-          <div class="project-desc">Cross-platform push notification system using Amazon SNS with Ionic 4. Handles
-            device token registration and targeted push delivery.</div>
-          <div class="project-stack"><span class="stack-tag">Ionic 4</span><span class="stack-tag">AWS SNS</span><span
-              class="stack-tag">TypeScript</span></div>
+        <div class="project-card proj-item">
+          <i class="fa-solid fa-bell project-icon"></i>
+          <div class="project-title">Push Notifications via AWS SNS</div>
+          <div class="project-desc">Cross-platform push notification system using Amazon SNS. Handles device token
+            registration and targeted push delivery.</div>
           <div class="project-links">
-            <a href="https://github.com/smitnirmal3597/PushNotification" target="_blank" class="proj-link"><i
+            <a href="https://github.com/smitmnirmal/PushNotification" target="_blank" class="btn-glass"><i
                 class="fa-brands fa-github"></i> GitHub</a>
           </div>
         </div>
 
         <!-- Slot Machine API -->
-        <div class="project-card reveal">
-          <div style="font-size:1.8rem;margin-bottom:.8rem">🎰</div>
+        <div class="project-card proj-item">
+          <i class="fa-solid fa-coins project-icon"></i>
           <div class="project-title">Slot Machine API</div>
           <div class="project-desc">RESTful API backend for a slot machine game built with C# and .NET Core, featuring
-            game logic, payout calculations, and session management.</div>
-          <div class="project-stack"><span class="stack-tag">C#</span><span class="stack-tag">.NET Core</span><span
-              class="stack-tag">REST API</span></div>
+            game logic and payout calculations.</div>
           <div class="project-links">
-            <a href="https://github.com/smitnirmal3597/slot-machine-api" target="_blank" class="proj-link"><i
+            <a href="https://github.com/smitmnirmal/slot-machine-api" target="_blank" class="btn-glass"><i
                 class="fa-brands fa-github"></i> GitHub</a>
           </div>
         </div>
 
         <!-- Admit Decision System -->
-        <div class="project-card reveal">
-          <div style="font-size:1.8rem;margin-bottom:.8rem">🎓</div>
+        <div class="project-card proj-item">
+          <i class="fa-solid fa-graduation-cap project-icon"></i>
           <div class="project-title">Admit Decision System</div>
-          <div class="project-desc">Full-stack university admission management system with role-based access control,
-            decision workflows, and an Angular dashboard frontend.</div>
-          <div class="project-stack"><span class="stack-tag">Angular</span><span class="stack-tag">Node.js</span><span
-              class="stack-tag">MongoDB</span></div>
+          <div class="project-desc">Full-stack university admission management system with role-based access control and
+            an Angular dashboard frontend.</div>
           <div class="project-links">
-            <a href="https://github.com/smitnirmal3597/AdmitDecisionSystem" target="_blank" class="proj-link"><i
-                class="fa-brands fa-github"></i> GitHub</a>
-          </div>
-        </div>
-
-        <!-- Sociato -->
-        <div class="project-card reveal">
-          <div style="font-size:1.8rem;margin-bottom:.8rem">📱</div>
-          <div class="project-title">Sociato</div>
-          <div class="project-desc">Campus social network Android app connecting students with events, groups, and
-            resources at their university.</div>
-          <div class="project-stack"><span class="stack-tag">Android</span><span class="stack-tag">Java</span><span
-              class="stack-tag">Firebase</span></div>
-          <div class="project-links">
-            <a href="https://github.com/smitnirmal3597/Sociato" target="_blank" class="proj-link"><i
-                class="fa-brands fa-github"></i> GitHub</a>
-          </div>
-        </div>
-
-        <!-- React Dashboard -->
-        <div class="project-card reveal">
-          <div style="font-size:1.8rem;margin-bottom:.8rem">📊</div>
-          <div class="project-title">React Dashboard</div>
-          <div class="project-desc">Modern analytics dashboard built with React featuring charts, data tables, and
-            responsive layout components.</div>
-          <div class="project-stack"><span class="stack-tag">React</span><span class="stack-tag">JavaScript</span><span
-              class="stack-tag">CSS3</span></div>
-          <div class="project-links">
-            <a href="https://github.com/smitnirmal3597/react-dashboard" target="_blank" class="proj-link"><i
+            <a href="https://github.com/smitmnirmal/AdmitDecisionSystem" target="_blank" class="btn-glass"><i
                 class="fa-brands fa-github"></i> GitHub</a>
           </div>
         </div>
@@ -359,34 +357,25 @@
   <!-- CONTACT -->
   <section id="contact">
     <div class="section-wrapper">
-      <div class="reveal">
+      <div class="motion-el">
         <p class="section-label">// get in touch</p>
-        <h2 class="section-title">Let's <span>Connect</span></h2>
-        <div class="section-sep"></div>
+        <h2 class="section-title">Let's <span class="gradient-text">Connect</span></h2>
       </div>
-      <div class="contact-inner reveal">
-        <p class="contact-desc">I'm always open to discussing new opportunities, interesting projects, or just having a
-          chat about tech. Feel free to reach out!</p>
-        <div class="contact-cards">
-          <a href="mailto:smitmnirmal@gmail.com" class="contact-card">
-            <div class="cc-label">Email</div>
-            <div class="cc-val">smitmnirmal@gmail.com</div>
-          </a>
-          <a href="https://linkedin.com/in/smitnirmal" target="_blank" class="contact-card">
-            <div class="cc-label">LinkedIn</div>
-            <div class="cc-val">linkedin.com/in/smitnirmal</div>
-          </a>
-          <a href="https://splitnsave.app" target="_blank" class="contact-card">
-            <div class="cc-label">Startup</div>
-            <div class="cc-val">splitnsave.app</div>
-          </a>
-          <a href="https://github.com/smitnirmal3597" target="_blank" class="contact-card">
-            <div class="cc-label">GitHub</div>
-            <div class="cc-val">github.com/smitnirmal3597</div>
-          </a>
-        </div>
-        <a href="mailto:smitmnirmal@gmail.com" class="contact-email-btn">
-          <i class="fa-solid fa-paper-plane"></i> Say Hello
+      <div class="contact-grid motion-el">
+        <a href="mailto:smitmnirmal@gmail.com" class="contact-card hover-card">
+          <i class="fa-solid fa-envelope"></i>
+          <h4>Email</h4>
+          <p>smitmnirmal@gmail.com</p>
+        </a>
+        <a href="https://linkedin.com/in/smitnirmal" target="_blank" class="contact-card hover-card">
+          <i class="fa-brands fa-linkedin-in"></i>
+          <h4>LinkedIn</h4>
+          <p>in/smitnirmal</p>
+        </a>
+        <a href="https://github.com/smitmnirmal" target="_blank" class="contact-card hover-card">
+          <i class="fa-brands fa-github"></i>
+          <h4>GitHub</h4>
+          <p>smitmnirmal</p>
         </a>
       </div>
     </div>
@@ -394,103 +383,350 @@
 
   <!-- FOOTER -->
   <footer>
-    <div class="footer-inner"
-      style="max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem">
-      <span class="footer-logo-txt">&lt;smit/&gt;</span>
-      <span class="footer-copy">© 2026 Smit Nirmal · New Jersey</span>
+    <div class="footer-inner">
+      <div class="nav-logo">&lt;<span>smit</span>/&gt;</div>
+      <div class="footer-text">© 2026 Smit Nirmal</div>
       <div class="footer-links">
         <a href="https://linkedin.com/in/smitnirmal" target="_blank">LinkedIn</a>
-        <a href="https://github.com/smitnirmal3597" target="_blank">GitHub</a>
-        <a href="https://splitnsave.app" target="_blank">SplitNSave</a>
+        <a href="https://github.com/smitmnirmal" target="_blank">GitHub</a>
         <a href="documents/Resume-Smit.pdf" target="_blank">Resume</a>
       </div>
     </div>
   </footer>
 
+  <script type="module">
+    import { animate, inView, stagger } from "https://cdn.jsdelivr.net/npm/motion@latest/+esm";
+
+    // ── INITIAL REVEAL ──
+    animate(".hero-content > *",
+      { opacity: [0, 1], y: [50, 0] },
+      { delay: stagger(0.15), duration: 0.9, easing: [0.22, 1, 0.36, 1] }
+    );
+
+    // ── SCROLL REVEALS ──
+    // Generic elements
+    inView(".motion-el", (info) => {
+      animate(info.target, { opacity: [0, 1], y: [40, 0] }, { duration: 0.9, easing: [0.17, 0.55, 0.55, 1] });
+    }, { amount: 0.15 });
+
+    // Bento Box stagger
+    const bentoItems = document.querySelectorAll(".bento-item");
+    if (bentoItems.length > 0) {
+      bentoItems.forEach(el => el.style.opacity = 0);
+      inView("#bento-container", () => {
+        animate(bentoItems, { opacity: [0, 1], scale: [0.9, 1], y: [50, 0] }, { delay: stagger(0.12), duration: 0.8, easing: [0.22, 1, 0.36, 1] });
+      }, { amount: 0.15 });
+    }
+
+    // Timeline stagger
+    const tlItems = document.querySelectorAll(".tl-motion");
+    if (tlItems.length > 0) {
+      tlItems.forEach(el => el.style.opacity = 0);
+      inView("#timeline-container", () => {
+        animate(tlItems, { opacity: [0, 1], x: [-40, 0] }, { delay: stagger(0.2), duration: 0.8, easing: [0.22, 1, 0.36, 1] });
+      }, { amount: 0.1 });
+    }
+
+    // Projects stagger
+    const projItems = document.querySelectorAll(".proj-item");
+    if (projItems.length > 0) {
+      projItems.forEach(el => el.style.opacity = 0);
+      inView("#projects-container", () => {
+        animate(projItems, { opacity: [0, 1], y: [50, 0] }, { delay: stagger(0.15), duration: 0.9, easing: [0.22, 1, 0.36, 1] });
+      }, { amount: 0.15 });
+    }
+
+    // ── INTERACTIVE HOVER PHYSICS ──
+    document.querySelectorAll(".btn-primary, .btn-glass, .contact-card").forEach(button => {
+      button.addEventListener("mouseenter", () => animate(button, { scale: 1.03 }, { type: "spring", stiffness: 400, damping: 17 }));
+      button.addEventListener("mouseleave", () => animate(button, { scale: 1 }, { type: "spring", stiffness: 400, damping: 17 }));
+    });
+  </script>
+
   <script>
-    // ── PARTICLES ──
-    (function () {
-      const canvas = document.getElementById('particles-canvas');
-      const ctx = canvas.getContext('2d');
-      let W, H, particles = [];
-      const COLORS = ['129,140,248', '52,211,153', '244,114,182'];
-      function resize() { W = canvas.width = window.innerWidth; H = canvas.height = window.innerHeight; }
-      resize();
-      window.addEventListener('resize', () => { resize(); });
-      class P {
-        constructor() {
-          this.reset();
-        }
-        reset() {
-          this.x = Math.random() * W; this.y = Math.random() * H;
-          this.vx = (Math.random() - .5) * .25; this.vy = (Math.random() - .5) * .25;
-          this.r = Math.random() * 1.2 + .4;
-          this.alpha = Math.random() * .25 + .05;
-          this.color = COLORS[Math.floor(Math.random() * COLORS.length)];
-        }
-        update() { this.x += this.vx; this.y += this.vy; if (this.x < 0 || this.x > W) this.vx *= -1; if (this.y < 0 || this.y > H) this.vy *= -1; }
-        draw() { ctx.beginPath(); ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2); ctx.fillStyle = `rgba(${this.color},${this.alpha})`; ctx.fill(); }
+    // ── NAV HAMBURGER & SCROLL ──
+    const nav = document.getElementById('navbar');
+    const ham = document.getElementById('hamburger');
+    const links = document.getElementById('nav-links');
+
+    window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 40); });
+
+    ham.addEventListener('click', () => {
+      links.classList.toggle('open');
+      ham.classList.toggle('open');
+    });
+
+    document.querySelectorAll('.nav-links a').forEach(a => {
+      a.addEventListener('click', () => {
+        links.classList.remove('open');
+        ham.classList.remove('open');
+      });
+    });
+
+    document.addEventListener('click', e => {
+      if (!nav.contains(e.target)) {
+        links.classList.remove('open');
+        ham.classList.remove('open');
       }
-      const count = Math.min(60, Math.floor(W / 22));
-      for (let i = 0; i < count; i++) particles.push(new P());
-      function connect() {
-        for (let i = 0; i < particles.length; i++)
-          for (let j = i + 1; j < particles.length; j++) {
-            const dx = particles[i].x - particles[j].x, dy = particles[i].y - particles[j].y;
-            const d = Math.sqrt(dx * dx + dy * dy);
-            if (d < 100) { ctx.beginPath(); ctx.moveTo(particles[i].x, particles[i].y); ctx.lineTo(particles[j].x, particles[j].y); ctx.strokeStyle = `rgba(129,140,248,${.05 * (1 - d / 100)})`; ctx.lineWidth = .5; ctx.stroke(); }
+    });
+
+    // Active nav highlight
+    const sections = document.querySelectorAll('section[id]');
+    const navAs = document.querySelectorAll('.nav-links a');
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          navAs.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + e.target.id));
+        }
+      });
+    }, { threshold: 0.4 });
+    sections.forEach(s => io.observe(s));
+  </script>
+
+  <script>
+    // ── TOPO HERO PHYSICS (Vanilla JS) ──
+    (function () {
+      const canvas = document.getElementById("topo-canvas");
+      if (!canvas) return;
+      const ctx = canvas.getContext("2d");
+      let cw = canvas.width = window.innerWidth;
+      let ch = canvas.height = window.innerHeight;
+
+      let time = 0;
+      function draw() {
+        ctx.clearRect(0, 0, cw, ch);
+        ctx.lineWidth = 1;
+
+        const rows = 35;
+        const spacing = ch / rows;
+
+        for (let i = 0; i < rows; i++) {
+          ctx.beginPath();
+          for (let x = 0; x <= cw; x += 30) {
+            // Complex waveform for programmer topo look
+            const noise1 = Math.sin(x * 0.005 + time + i * 0.1) * 35;
+            const noise2 = Math.cos(x * 0.01 - time * 0.5 + i * 0.05) * 15;
+            const y = i * spacing + noise1 + noise2;
+
+            if (x === 0) ctx.moveTo(x, y);
+            else ctx.lineTo(x, y);
           }
+
+          // Gradient based on depth
+          const opacity = 0.03 + (i / rows) * 0.15;
+          ctx.strokeStyle = `rgba(59, 130, 246, ${opacity})`;
+          ctx.stroke();
+        }
       }
-      function loop() { ctx.clearRect(0, 0, W, H); particles.forEach(p => { p.update(); p.draw(); }); connect(); requestAnimationFrame(loop); }
-      loop();
+
+      // Draw initial static frame immediately
+      draw();
+
+      // Delay continuous heavy rendering until laptop entrance finishes (2.5s)
+      setTimeout(() => {
+        function loop() {
+          time += 0.01;
+          draw();
+          requestAnimationFrame(loop);
+        }
+        loop();
+      }, 2500);
+
+      window.addEventListener("resize", () => {
+        cw = canvas.width = window.innerWidth;
+        ch = canvas.height = window.innerHeight;
+      });
     })();
 
-    // ── TYPED ──
+    // ── CSS 3D LAPTOP PARALLAX (Halide Style) ──
     (function () {
-      const el = document.getElementById('typed-text');
-      const phrases = ['Full Stack Engineer', 'Co-founder @ SplitNSave', 'React Native Developer', 'Cloud & DevOps Engineer', 'Building things that scale'];
-      let pi = 0, ci = 0, del = false;
-      function tick() {
-        const phrase = phrases[pi];
-        if (!del) { el.textContent = phrase.slice(0, ++ci); if (ci === phrase.length) { del = true; setTimeout(tick, 1800); return; } }
-        else { el.textContent = phrase.slice(0, --ci); if (ci === 0) { del = false; pi = (pi + 1) % phrases.length; } }
-        setTimeout(tick, del ? 45 : 80);
+      const hc3d = document.getElementById('hc-3d');
+      if (!hc3d) return;
+
+      let cx = window.innerWidth / 2;
+      let cy = window.innerHeight / 2;
+      window.addEventListener('resize', () => {
+        cx = window.innerWidth / 2;
+        cy = window.innerHeight / 2;
+      });
+
+      let targetRotX = 55;
+      let targetRotZ = -25;
+      let currentRotX = 55;
+      let currentRotZ = -25;
+
+      const handleMouseMove = (e) => {
+        const x = (cx - e.clientX) / 25;
+        const y = (cy - e.clientY) / 25;
+        targetRotX = 55 + y / 2;
+        targetRotZ = -25 + x / 2;
+      };
+
+      function renderParallax() {
+        // Linear interpolation (lerp) for buttery smooth follow
+        currentRotX += (targetRotX - currentRotX) * 0.1;
+        currentRotZ += (targetRotZ - currentRotZ) * 0.1;
+        
+        hc3d.style.transform = `translateY(0px) rotateX(${currentRotX}deg) rotateZ(${currentRotZ}deg) scale(1)`;
+        requestAnimationFrame(renderParallax);
       }
-      tick();
+
+      // Entrance Animation
+      hc3d.style.opacity = '0';
+      hc3d.style.transform = 'translateY(100px) rotateX(90deg) rotateZ(0deg) scale(0.8)';
+
+      const lid = document.querySelector('.hc-lid');
+      if (lid) {
+        lid.style.transform = 'rotateX(-179deg)'; // Start closed
+      }
+
+      setTimeout(() => {
+        // 1. Laptop fades in and drops into place
+        hc3d.style.transition = 'all 1.2s cubic-bezier(0.16, 1, 0.3, 1)';
+        hc3d.style.opacity = '1';
+        hc3d.style.transform = 'translateY(0px) rotateX(55deg) rotateZ(-25deg) scale(1)';
+
+        // 2. Open the lid
+        setTimeout(() => {
+          if (lid) {
+            lid.style.transition = 'transform 1.5s cubic-bezier(0.34, 1.56, 0.64, 1)'; // Bouncy spring open
+            lid.style.transform = 'rotateX(-75deg)'; // Open angle
+          }
+
+          // 3. Enable mouse parallax after everything settles
+          setTimeout(() => {
+            // Remove CSS transition so JS lerp can take over without stuttering
+            hc3d.style.transition = 'none';
+            window.addEventListener('mousemove', handleMouseMove);
+            renderParallax(); // Start the 60fps parallax loop
+          }, 1500);
+        }, 800);
+      }, 300);
     })();
-
-    // ── NAV ──
     (function () {
-      const nav = document.getElementById('navbar');
-      const ham = document.getElementById('hamburger');
-      const links = document.getElementById('nav-links');
-      window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 40); });
-      ham.addEventListener('click', () => { links.classList.toggle('open'); ham.classList.toggle('open'); });
-      document.querySelectorAll('.nav-links a').forEach(a => a.addEventListener('click', () => { links.classList.remove('open'); ham.classList.remove('open'); }));
+      const container = document.getElementById("gravity-canvas-container");
+      if (!container || !window.Matter) return;
 
-      // Close menu on outside click
-      document.addEventListener('click', e => { if (!nav.contains(e.target)) links.classList.remove('open'), ham.classList.remove('open'); });
-      // Active nav highlight
-      const sections = document.querySelectorAll('section[id]');
-      const navAs = document.querySelectorAll('.nav-links a');
-      const io = new IntersectionObserver(entries => {
-        entries.forEach(e => { if (e.isIntersecting) { navAs.forEach(a => { a.classList.toggle('active', a.getAttribute('href') === '#' + e.target.id); }); } });
-      }, { threshold: 0.4 });
-      sections.forEach(s => io.observe(s));
-    })();
+      const Engine = Matter.Engine,
+        Runner = Matter.Runner,
+        Bodies = Matter.Bodies,
+        Composite = Matter.Composite,
+        Mouse = Matter.Mouse,
+        MouseConstraint = Matter.MouseConstraint;
 
-    // ── SCROLL REVEAL ──
-    (function () {
-      const io = new IntersectionObserver(entries => {
-        entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-      }, { threshold: 0.12 });
-      document.querySelectorAll('.reveal,.tl-item,.project-card').forEach(el => io.observe(el));
-    })();
+      const engine = Engine.create();
+      const world = engine.world;
 
-    // ── SKILL CARDS HOVER STAGGER ──
-    (function () {
-      const pills = document.querySelectorAll('.skill-pill');
-      pills.forEach((p, i) => { p.style.transitionDelay = (i * 15) + 'ms'; });
+      const skills = [
+        "Java", "Kotlin", "Node.js", "Spring Boot", "PostgreSQL", "Redis",
+        "TypeScript", "React", "Angular", "HTML/CSS", "AWS", "Docker", "Kubernetes", "React Native", "Datadog", "Argo CD"
+      ];
+
+      const htmlBodies = [];
+
+      // Initialize elements off-screen
+      skills.forEach((skill) => {
+        const el = document.createElement('div');
+        el.className = 'gravity-skill';
+        el.innerText = skill;
+        el.style.transform = `translate(-9999px, -9999px)`;
+        container.appendChild(el);
+        htmlBodies.push({ el, skill, added: false });
+      });
+
+      let dropIndex = 0;
+      let hasStarted = false;
+
+      function dropNext() {
+        if (!container.clientWidth) return;
+
+        if (dropIndex >= htmlBodies.length) {
+          // Infinite loop: randomly pick an existing block and drop it again
+          const randomItem = htmlBodies[Math.floor(Math.random() * htmlBodies.length)];
+          if (randomItem && randomItem.body) {
+            Matter.Body.setPosition(randomItem.body, {
+              x: Math.random() * (container.clientWidth - 100) + 50,
+              y: -80
+            });
+            Matter.Body.setVelocity(randomItem.body, { x: (Math.random() - 0.5) * 4, y: 0 });
+            Matter.Body.setAngularVelocity(randomItem.body, (Math.random() - 0.5) * 0.1);
+          }
+          return;
+        }
+
+        const item = htmlBodies[dropIndex];
+        const w = item.el.offsetWidth || 100;
+        const h = item.el.offsetHeight || 40;
+
+        const startX = Math.random() * (container.clientWidth - 100) + 50;
+        const startY = -80;
+
+        const body = Bodies.rectangle(startX, startY, w, h, {
+          restitution: 0.6,
+          friction: 0.1,
+          render: { visible: false }
+        });
+
+        Matter.Body.setVelocity(body, { x: (Math.random() - 0.5) * 5, y: 0 });
+        Matter.Body.setAngularVelocity(body, (Math.random() - 0.5) * 0.1);
+
+        Composite.add(world, body);
+        item.body = body;
+        item.w = w;
+        item.h = h;
+        item.added = true;
+
+        dropIndex++;
+      }
+
+      const observer = new IntersectionObserver((entries) => {
+        if (entries[0].isIntersecting && !hasStarted) {
+          hasStarted = true;
+          // Start the rain
+          dropNext();
+          setInterval(dropNext, 600);
+        }
+      }, { threshold: 0.2 });
+
+      observer.observe(container);
+
+      let floor, leftWall, rightWall;
+      function createWalls() {
+        const w = container.clientWidth;
+        const h = container.clientHeight;
+        const t = 100;
+        if (floor) Composite.remove(world, [floor, leftWall, rightWall]);
+        floor = Bodies.rectangle(w / 2, h + t / 2, w + 200, t, { isStatic: true, render: { visible: false } });
+        leftWall = Bodies.rectangle(-t / 2, h / 2, t, h * 3, { isStatic: true, render: { visible: false } });
+        rightWall = Bodies.rectangle(w + t / 2, h / 2, t, h * 3, { isStatic: true, render: { visible: false } });
+        Composite.add(world, [floor, leftWall, rightWall]);
+      }
+
+      // Delay wall creation slightly so container size is computed if hidden
+      setTimeout(createWalls, 200);
+
+      const mouse = Mouse.create(container);
+      const mouseConstraint = MouseConstraint.create(engine, {
+        mouse: mouse,
+        constraint: { stiffness: 0.2, render: { visible: false } }
+      });
+      Composite.add(world, mouseConstraint);
+
+      Runner.run(Runner.create(), engine);
+
+      function update() {
+        htmlBodies.forEach(item => {
+          if (!item.added) return;
+          const { x, y } = item.body.position;
+          item.el.style.transform = `translate(${x - item.w / 2}px, ${y - item.h / 2}px) rotate(${item.body.angle}rad)`;
+        });
+        requestAnimationFrame(update);
+      }
+      update();
+
+      window.addEventListener('resize', () => {
+        createWalls();
+      });
     })();
   </script>
 </body>
