@@ -1,0 +1,9 @@
+# Scratch folders created by AI assistants / tooling
+Claude outputs/
+cloud output/
+cloud outputs/
+.agent/
+
+# OS noise
+.DS_Store
+Thumbs.db

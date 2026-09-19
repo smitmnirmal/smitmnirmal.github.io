@@ -7,8 +7,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Smit Nirmal — Software Engineer</title>
   <meta name="description"
-    content="Smit Nirmal — Full Stack Software Engineer & Co-founder of SplitNSave. Building scalable products across web, mobile, and cloud.">
+    content="Smit Nirmal - Full-stack software engineer. Six years building event-driven platforms and the interfaces on top of them, across banking, retail and fintech.">
   <meta name="author" content="Smit Nirmal">
+  <link rel="canonical" href="https://smitmnirmal.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://smitmnirmal.github.io/">
+  <meta property="og:title" content="Smit Nirmal - Full-Stack Software Engineer">
+  <meta property="og:description"
+    content="Six years building event-driven platforms and the interfaces on top of them, across banking, retail and fintech. Currently at American Express.">
+  <meta property="og:image" content="https://smitmnirmal.github.io/images/SN-logo.PNG">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Smit Nirmal - Full-Stack Software Engineer">
+  <meta name="twitter:description"
+    content="Six years building event-driven platforms and the interfaces on top of them. Currently at American Express.">
+  <meta name="twitter:image" content="https://smitmnirmal.github.io/images/SN-logo.PNG">
   <link rel="icon" href="images/SN-logo.PNG" type="image/png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="portfolio.css">
@@ -51,6 +63,7 @@
     <ul class="nav-links" id="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#experience">Experience</a></li>
+      <li><a href="#architecture">Systems</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#contact" class="nav-cta">Contact</a></li>
     </ul>
@@ -64,8 +77,8 @@
     <div class="hero-content motion-el">
       <div class="hero-tag"><span class="dot"></span> open_to_work &amp;&amp; building_in_prod</div>
       <h1 class="hero-h1">Smit Nirmal<br><span class="gradient-text">Software Engineer</span></h1>
-      <p class="hero-sub">Full Stack Engineer & Co-founder building highly scalable products across web, mobile, and
-        cloud infrastructures.</p>
+      <p class="hero-sub">I build event-driven platforms and the interfaces on top of them. Six years across banking,
+        retail, and fintech &mdash; currently at American Express.</p>
       <div class="hero-btns">
         <a href="#projects" class="btn-primary">View My Work</a>
         <a href="documents/Resume-Smit.pdf" target="_blank" class="btn-outline"><i class="fa-solid fa-file-arrow-down"
@@ -87,47 +100,90 @@
     </div>
   </section>
 
+  <!-- STATS BAND -->
+  <section id="stats" aria-label="At a glance">
+    <div class="section-wrapper">
+      <div class="stats-band motion-el">
+        <div class="stat">
+          <div class="stat-num" data-count="6">6</div>
+          <div class="stat-label">Years shipping<br>production software</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num" data-count="5">5</div>
+          <div class="stat-label">Financial institutions<br>built for</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num stat-num-sm">$50&ndash;100K</div>
+          <div class="stat-label">Order value protected<br>on every store transfer</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num" data-count="2">2</div>
+          <div class="stat-label">App stores<br>shipped to</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ABOUT (BENTO BOX) -->
   <section id="about">
     <div class="section-wrapper">
       <div class="motion-el">
         <p class="section-label">// about me</p>
-        <h2 class="section-title">Crafting <span class="gradient-text">Experiences</span></h2>
+        <h2 class="section-title">Owning systems <span class="gradient-text">end to end</span></h2>
       </div>
 
       <div class="bento-grid" id="bento-container">
         <!-- Bio -->
-        <div class="bento-card bento-bio bento-item"
-          style="display: flex; flex-direction: column; justify-content: center;">
+        <div class="bento-card bento-bio bento-item">
           <h3>Hi, I'm Smit.</h3>
-          <p>I'm a <strong>Full Stack Software Engineer</strong> with over 5 years of experience designing and shipping
-            production-grade applications across web, mobile, and cloud platforms.</p>
-          <p>I co-founded <strong>SplitNSave</strong>, a cross-platform expense splitting app, and I thrive at the
-            intersection of clean architecture and delightful user experiences. I care deeply about code quality,
-            developer experience, and building things that last.</p>
+          <p>I'm a <strong>full-stack engineer</strong> with 6 years building cloud-native, event-driven systems and the
+            React, Vue.js, and Angular interfaces on top of them.</p>
+          <p>At <strong>American Express</strong> I own the notification and webhook domain of an enterprise integration
+            platform &mdash; from the architecture decision record through production support, on a project running
+            without a product manager.</p>
+          <p>I also ship on my own. <strong>SplitNSave</strong> is live on both app stores, and I'm building a salon
+            platform with a RAG chatbot and MCP tools on top of it.</p>
 
-          <div style="display: flex; gap: 1rem; margin-top: 1.5rem; flex-wrap: wrap;">
-            <div
-              style="background: rgba(255,255,255,0.05); padding: 0.6rem 1.2rem; border-radius: 12px; border: 1px solid var(--border); display: flex; align-items: center; gap: 0.8rem; font-weight: 500;">
-              <i class="fa-solid fa-code" style="color: var(--accent); font-size: 1.2rem;"></i> 5+ Years Exp.
-            </div>
-            <div
-              style="background: rgba(255,255,255,0.05); padding: 0.6rem 1.2rem; border-radius: 12px; border: 1px solid var(--border); display: flex; align-items: center; gap: 0.8rem; font-weight: 500;">
-              <i class="fa-solid fa-location-dot" style="color: var(--accent-2); font-size: 1.2rem;"></i> New York, NY
-            </div>
+          <div class="bio-chips">
+            <div class="bio-chip"><i class="fa-solid fa-code"></i> 6 Years Exp.</div>
+            <div class="bio-chip"><i class="fa-solid fa-location-dot"></i> Jersey City, NJ</div>
+            <div class="bio-chip"><i class="fa-solid fa-building-columns"></i> Fintech &amp; Banking</div>
           </div>
         </div>
 
         <!-- Gravity Skills -->
-        <div class="bento-card bento-gravity bento-item"
-          style="grid-column: span 2; grid-row: span 2; padding: 0; overflow: hidden; position: relative; min-height: 400px;">
-          <div
-            style="position: absolute; top: 2rem; left: 0; right: 0; text-align: center; z-index: 2; pointer-events: none;">
-            <i class="fa-solid fa-cubes skill-icon"
-              style="font-size:1.8rem; margin-bottom: 0.8rem; color: var(--accent-3);"></i>
-            <h4 style="font-size:1.5rem; font-family:'Space Grotesk'; font-weight:700;">Tech Stack</h4>
+        <div class="bento-card bento-gravity bento-item">
+          <div class="bento-gravity-head">
+            <i class="fa-solid fa-cubes skill-icon"></i>
+            <h4>Tech Stack</h4>
+            <span class="bento-hint">drag them around</span>
           </div>
-          <div id="gravity-canvas-container" style="width: 100%; height: 100%; position: absolute; inset: 0;"></div>
+          <div id="gravity-canvas-container"></div>
+        </div>
+
+        <!-- How I build -->
+        <div class="bento-card bento-item bento-ai">
+          <div class="bento-head">
+            <i class="fa-solid fa-robot" style="color: var(--accent-3)"></i>
+            <h4>How I build with AI</h4>
+          </div>
+          <ul class="bento-list">
+            <li><span>AGENTS.md</span> conventions so agents follow the team's standards, not their own</li>
+            <li>An <span>LLM pull-request reviewer</span> that triages open unreviewed PRs</li>
+            <li>Parallel coding agents for feature delivery</li>
+            <li><span>RAG</span> retrieval and <span>MCP servers</span> in my own products</li>
+          </ul>
+        </div>
+
+        <!-- Currently -->
+        <div class="bento-card bento-item bento-now">
+          <div class="bento-head">
+            <i class="fa-solid fa-satellite-dish" style="color: var(--accent-2)"></i>
+            <h4>Currently</h4>
+          </div>
+          <p class="now-line"><span class="now-dot"></span> Scaling publisher and subscriber onboarding at Amex</p>
+          <p class="now-line"><span class="now-dot"></span> Building a salon SaaS with an AI booking assistant</p>
+          <p class="now-line"><span class="now-dot"></span> Open to senior full-stack and platform roles</p>
         </div>
       </div>
     </div>
@@ -142,11 +198,9 @@
       </div>
 
       <div class="exp-accordion" id="exp-accordion">
-
         <!-- American Express -->
         <div class="exp-panel active">
-          <div class="exp-glow"
-            style="background: radial-gradient(circle at center, rgba(0, 111, 207, 0.2), transparent 70%);"></div>
+          <div class="exp-glow" style="background: radial-gradient(circle at center, rgba(0, 111, 207, 0.2), transparent 70%);"></div>
           <div class="exp-collapsed-view">
             <img src="logo/amex-logo.svg" class="exp-icon-img" alt="Amex Logo">
             <h3 class="exp-vert-title">Amex</h3>
@@ -155,18 +209,28 @@
             <div class="exp-header">
               <div class="exp-title-wrapper">
                 <h3 class="exp-company">American Express</h3>
-                <p class="exp-role">Engineer II</p>
+                <p class="exp-role">Engineer II &middot; Contract</p>
               </div>
-              <div class="exp-date">Dec 2025 — Present · New York, NY</div>
+              <div class="exp-date">Dec 2025 &mdash; Present &middot; New York, NY</div>
             </div>
             <div class="exp-details">
-              <p>Architecting and developing a scalable event-driven notification platform to manage subscription
-                lifecycles and deliver real-time webhooks. Leveraging AI-assisted tools like GitHub Copilot for code
-                generation, architecture ideation, and automated testing to accelerate engineering productivity.</p>
+              <p class="exp-context">Enterprise integration platform that lets internal product teams consume third-party
+                financial data without building their own connections.</p>
+              <ul class="exp-bullets">
+                <li>Own the <strong>notification and webhook domain end to end</strong> across four services, letting
+                  internal teams publish and consume business events without building their own integrations.</li>
+                <li>Authored the <strong>architecture decision records</strong> that made event onboarding
+                  configuration-driven and subscriptions self-service, removing a release cycle from every new event.</li>
+                <li>Designed an <strong>event-processing audit store</strong> with month-wise partitioning and a BigQuery
+                  retention stream, giving support a queryable failure trail long after application logs expire.</li>
+                <li>Established the team's <strong>AI-assisted development practice</strong>, including an automated LLM
+                  pull-request reviewer.</li>
+              </ul>
               <div class="tl-badges">
                 <span class="tl-badge">Kotlin</span><span class="tl-badge">Ktor</span>
                 <span class="tl-badge">React</span><span class="tl-badge">PostgreSQL</span>
-                <span class="tl-badge">AWS</span><span class="tl-badge">Datadog</span>
+                <span class="tl-badge">AWS SNS/SQS</span><span class="tl-badge">Terraform</span>
+                <span class="tl-badge">Datadog</span><span class="tl-badge">BigQuery</span>
               </div>
             </div>
           </div>
@@ -174,8 +238,7 @@
 
         <!-- Egen -->
         <div class="exp-panel">
-          <div class="exp-glow"
-            style="background: radial-gradient(circle at center, rgba(16, 185, 129, 0.2), transparent 70%);"></div>
+          <div class="exp-glow" style="background: radial-gradient(circle at center, rgba(16, 185, 129, 0.2), transparent 70%);"></div>
           <div class="exp-collapsed-view">
             <img src="logo/egen-logo.jpg" class="exp-icon-img" alt="Egen Logo">
             <h3 class="exp-vert-title">Egen</h3>
@@ -186,16 +249,27 @@
                 <h3 class="exp-company">Egen</h3>
                 <p class="exp-role">Senior Software Engineer</p>
               </div>
-              <div class="exp-date">May 2022 — Nov 2025 · Remote</div>
+              <div class="exp-date">May 2022 &mdash; Nov 2025 &middot; Remote</div>
             </div>
             <div class="exp-details">
-              <p>Led full-stack development of enterprise-scale applications. Optimized distributed caching to improve
-                API efficiency by 15% and reduced system load by 20%. Architected microservices and mentored junior
-                engineers.</p>
+              <p class="exp-context">Order fulfillment and transportation systems for a national retail client.</p>
+              <ul class="exp-bullets">
+                <li><strong>Promoted to Senior Software Engineer within 15 months</strong>; owned the transportation
+                  applications across their Spring services and Vue.js front ends, and mentored junior developers.</li>
+                <li><strong>Re-platformed ZipMove</strong> from a legacy Spring MVC application into a new Spring Boot
+                  service with a Vue.js interface, automating a manual workflow so stores transfer orders intact
+                  &mdash; <strong>protecting $50K to $100K in order value on every transfer</strong> that would otherwise
+                  have been lost to cancellation.</li>
+                <li>Built the <strong>Kafka-driven order-routing integration</strong> dispatching released orders to
+                  external partner Ortec for delivery-window optimization across multiple stores.</li>
+                <li>Improved <strong>API efficiency 15%</strong>, reduced <strong>system load 20%</strong>, and lowered
+                  <strong>error rates 35%</strong> through distributed caching with a fallback strategy.</li>
+              </ul>
               <div class="tl-badges">
-                <span class="tl-badge">Java</span><span class="tl-badge">Spring Boot</span>
-                <span class="tl-badge">Vue.js</span><span class="tl-badge">Kafka</span>
-                <span class="tl-badge">PostgreSQL</span>
+                <span class="tl-badge">Java</span><span class="tl-badge">Kotlin</span>
+                <span class="tl-badge">Spring Boot</span><span class="tl-badge">Vue.js</span>
+                <span class="tl-badge">Kafka</span><span class="tl-badge">PostgreSQL</span>
+                <span class="tl-badge">Datadog</span>
               </div>
             </div>
           </div>
@@ -203,8 +277,7 @@
 
         <!-- BDO Canada -->
         <div class="exp-panel">
-          <div class="exp-glow"
-            style="background: radial-gradient(circle at center, rgba(239, 68, 68, 0.2), transparent 70%);"></div>
+          <div class="exp-glow" style="background: radial-gradient(circle at center, rgba(239, 68, 68, 0.2), transparent 70%);"></div>
           <div class="exp-collapsed-view">
             <img src="logo/bdo-logo.svg" class="exp-icon-img" alt="BDO Logo">
             <h3 class="exp-vert-title">BDO</h3>
@@ -215,14 +288,21 @@
                 <h3 class="exp-company">BDO Canada</h3>
                 <p class="exp-role">Software Consultant</p>
               </div>
-              <div class="exp-date">Mar 2021 — May 2022 · Toronto, ON</div>
+              <div class="exp-date">Mar 2021 &mdash; May 2022 &middot; Toronto, ON</div>
             </div>
             <div class="exp-details">
-              <p>Delivered custom software solutions for enterprise clients. Built scalable backends and modern
-                frontends aligned with business goals while ensuring robust security and performance.</p>
+              <p class="exp-context">Embedded with Canada's largest financial institutions as a delivery consultant.</p>
+              <ul class="exp-bullets">
+                <li>Delivered secure, scalable web applications for <strong>TD, RBC, and Scotiabank</strong>, building
+                  responsive Angular front ends against C# and .NET Core services.</li>
+                <li>Translated ambiguous business requirements into shippable features alongside business analysts and
+                  project managers.</li>
+                <li>Supported team delivery through code reviews and mentoring junior developers.</li>
+              </ul>
               <div class="tl-badges">
                 <span class="tl-badge">C#</span><span class="tl-badge">.NET Core</span>
-                <span class="tl-badge">Angular</span><span class="tl-badge">Azure DevOps</span>
+                <span class="tl-badge">Angular</span><span class="tl-badge">SQL Server</span>
+                <span class="tl-badge">Azure DevOps</span>
               </div>
             </div>
           </div>
@@ -230,8 +310,7 @@
 
         <!-- OTPP -->
         <div class="exp-panel">
-          <div class="exp-glow"
-            style="background: radial-gradient(circle at center, rgba(168, 85, 247, 0.2), transparent 70%);"></div>
+          <div class="exp-glow" style="background: radial-gradient(circle at center, rgba(168, 85, 247, 0.2), transparent 70%);"></div>
           <div class="exp-collapsed-view">
             <img src="logo/otpp-logo.jpg" class="exp-icon-img" alt="OTPP Logo">
             <h3 class="exp-vert-title">OTPP</h3>
@@ -239,23 +318,31 @@
           <div class="exp-expanded-view">
             <div class="exp-header">
               <div class="exp-title-wrapper">
-                <h3 class="exp-company">Ontario Teachers'</h3>
-                <p class="exp-role">Programmer Analyst — Intern</p>
+                <h3 class="exp-company">Ontario Teachers' Pension Plan</h3>
+                <p class="exp-role">Programmer Analyst &middot; Intern</p>
               </div>
-              <div class="exp-date">Jan 2020 — Aug 2020 · Toronto, ON</div>
+              <div class="exp-date">Jan 2020 &mdash; Aug 2020 &middot; Toronto, ON</div>
             </div>
             <div class="exp-details">
-              <p>Developed and containerized microservices using Angular, ASP.NET, and Python, orchestrated via Docker
-                and Kubernetes. Built internal tools reducing manual processing time significantly.</p>
+              <p class="exp-context">One of the world's largest institutional investors.</p>
+              <ul class="exp-bullets">
+                <li>Developed and containerized microservices across Angular, ASP.NET, Spring Boot, and Python,
+                  orchestrating deployments with Docker and Kubernetes.</li>
+                <li>Built REST APIs with unit and integration test coverage in an Agile Scrum team.</li>
+              </ul>
               <div class="tl-badges">
-                <span class="tl-badge">Angular</span><span class="tl-badge">Python</span>
-                <span class="tl-badge">Docker</span><span class="tl-badge">Kubernetes</span>
+                <span class="tl-badge">Angular</span><span class="tl-badge">ASP.NET</span>
+                <span class="tl-badge">Python</span><span class="tl-badge">Docker</span>
+                <span class="tl-badge">Kubernetes</span>
               </div>
             </div>
           </div>
         </div>
-
       </div>
+
+      <p class="exp-earlier">Earlier: part-time Mobile Application Developer at <strong>Bidja Innovations Inc.</strong>
+        (Jan 2019 &mdash; Dec 2019), building an Ionic app that pulled live telemetry from CNC machines, while completing
+        the Master of Applied Computing.</p>
 
       <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -273,24 +360,134 @@
     </div>
   </section>
 
+  <!-- ARCHITECTURE -->
+  <section id="architecture">
+    <div class="section-wrapper">
+      <div class="motion-el">
+        <p class="section-label">// systems</p>
+        <h2 class="section-title">What I <span class="gradient-text">actually build</span></h2>
+        <p class="section-intro">The shape of the event-driven notification platform I work on day to day: publishers
+          register events, subscribers receive real-time webhooks, and every message is auditable long after the fact.
+          Drawn generically &mdash; the pattern, not any one employer's internals. Everything in blue is the kind of
+          service I own.</p>
+      </div>
+
+      <div class="arch-wrap motion-el">
+        <svg viewBox="0 0 1200 430" role="img" aria-label="Event-driven notification platform architecture"
+          class="arch-svg">
+          <defs>
+            <marker id="ah" markerWidth="9" markerHeight="9" refX="8" refY="3.2" orient="auto">
+              <path d="M0,0 L0,6.4 L8,3.2 z" fill="#64748b" />
+            </marker>
+            <marker id="ahd" markerWidth="9" markerHeight="9" refX="8" refY="3.2" orient="auto">
+              <path d="M0,0 L0,6.4 L8,3.2 z" fill="#8b5cf6" />
+            </marker>
+          </defs>
+
+          <!-- lane label -->
+          <text x="20" y="28" class="arch-lane">EVENT PATH</text>
+
+          <!-- top lane nodes -->
+          <g class="arch-node arch-ext">
+            <rect x="20" y="52" width="160" height="70" rx="14" />
+            <text x="100" y="82">Publisher team</text>
+            <text x="100" y="102" class="arch-sub">registers an event</text>
+          </g>
+          <g class="arch-node arch-mine">
+            <rect x="215" y="52" width="160" height="70" rx="14" />
+            <text x="295" y="82">Webhook</text>
+            <text x="295" y="102" class="arch-sub">validate &amp; publish</text>
+          </g>
+          <g class="arch-node arch-aws">
+            <rect x="410" y="52" width="160" height="70" rx="14" />
+            <text x="490" y="82">AWS SNS</text>
+            <text x="490" y="102" class="arch-sub">fan-out topic</text>
+          </g>
+          <g class="arch-node arch-aws">
+            <rect x="605" y="52" width="160" height="70" rx="14" />
+            <text x="685" y="82">AWS SQS</text>
+            <text x="685" y="102" class="arch-sub">durable queue</text>
+          </g>
+          <g class="arch-node arch-mine">
+            <rect x="800" y="52" width="160" height="70" rx="14" />
+            <text x="880" y="76">Orchestrator</text>
+            <text x="880" y="94" class="arch-sub">resolve client,</text>
+            <text x="880" y="110" class="arch-sub">transform payload</text>
+          </g>
+          <g class="arch-node arch-ext">
+            <rect x="995" y="52" width="160" height="70" rx="14" />
+            <text x="1075" y="82">Subscriber</text>
+            <text x="1075" y="102" class="arch-sub">callback URL</text>
+          </g>
+
+          <!-- top lane arrows -->
+          <path d="M180,87 L210,87" class="arch-arrow" marker-end="url(#ah)" />
+          <path d="M375,87 L405,87" class="arch-arrow" marker-end="url(#ah)" />
+          <path d="M570,87 L600,87" class="arch-arrow" marker-end="url(#ah)" />
+          <path d="M765,87 L795,87" class="arch-arrow" marker-end="url(#ah)" />
+          <path d="M960,87 L990,87" class="arch-arrow" marker-end="url(#ah)" />
+          <text x="975" y="42" class="arch-edge">real-time</text>
+
+          <!-- control plane -->
+          <text x="20" y="215" class="arch-lane">CONTROL PLANE</text>
+          <g class="arch-node arch-mine">
+            <rect x="215" y="240" width="160" height="70" rx="14" />
+            <text x="295" y="264">Onboarding</text>
+            <text x="295" y="282" class="arch-sub">connections +</text>
+            <text x="295" y="298" class="arch-sub">event registry</text>
+          </g>
+          <path d="M295,238 L295,126" class="arch-arrow arch-dash" marker-end="url(#ahd)" />
+          <text x="305" y="185" class="arch-edge arch-edge-v">validates event name</text>
+
+          <!-- the ADR win: config-driven handler routing -->
+          <path d="M375,275 L818,275 L818,128" class="arch-arrow arch-dash" marker-end="url(#ahd)" />
+          <text x="420" y="264" class="arch-edge arch-edge-hi">config-driven handlers &mdash; new events need no code change</text>
+
+          <!-- data plane -->
+          <text x="800" y="318" class="arch-lane">RETENTION</text>
+          <g class="arch-node arch-data">
+            <rect x="800" y="330" width="160" height="66" rx="14" />
+            <text x="880" y="356">Audit store</text>
+            <text x="880" y="376" class="arch-sub">partitioned monthly</text>
+          </g>
+          <g class="arch-node arch-data">
+            <rect x="995" y="330" width="160" height="66" rx="14" />
+            <text x="1075" y="356">BigQuery</text>
+            <text x="1075" y="376" class="arch-sub">long-term retention</text>
+          </g>
+          <path d="M900,126 L900,326" class="arch-arrow" marker-end="url(#ah)" />
+          <text x="912" y="215" class="arch-edge arch-edge-v">every event, full payload</text>
+          <path d="M960,363 L990,363" class="arch-arrow" marker-end="url(#ah)" />
+        </svg>
+      </div>
+
+      <div class="arch-legend motion-el">
+        <span><i class="dot-sq sq-mine"></i> Services I own</span>
+        <span><i class="dot-sq sq-aws"></i> AWS messaging</span>
+        <span><i class="dot-sq sq-data"></i> Retention &amp; compliance</span>
+        <span><i class="dot-sq sq-ext"></i> Consuming teams</span>
+      </div>
+    </div>
+  </section>
+
   <!-- PROJECTS -->
   <section id="projects">
     <div class="section-wrapper">
       <div class="motion-el">
         <p class="section-label">// portfolio</p>
-        <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+        <h2 class="section-title">Things I <span class="gradient-text">shipped myself</span></h2>
       </div>
 
       <div class="projects-grid" id="projects-container">
-
         <!-- FEATURED: SplitNSave -->
         <div class="project-card featured proj-item">
           <div>
-            <div class="feat-badge"><span class="dot"></span>Co-founded · Live</div>
+            <div class="feat-badge"><span class="dot"></span>Live on iOS &amp; Android</div>
             <div class="project-title">SplitNSave</div>
-            <div class="project-desc">A cross-platform expense splitting app built for groups — roommates, trips,
-              events. Features real-time sync, smart settlement logic, push notifications, and a seamless onboarding
-              experience.</div>
+            <div class="project-desc">A cross-platform expense splitting app for groups &mdash; roommates, trips,
+              carpooling, shared subscriptions. Real-time sync, smart settlement logic, push notifications, and an
+              onboarding flow that gets a group to its first split in under a minute. Designed, built, released and
+              supported end to end, with AI coding tools throughout.</div>
             <div class="tl-badges" style="margin-bottom: 2rem;">
               <span class="tl-badge">React Native</span><span class="tl-badge">TypeScript</span>
               <span class="tl-badge">Node.js</span><span class="tl-badge">PostgreSQL</span>
@@ -314,42 +511,47 @@
           </div>
         </div>
 
+        <!-- Salon SaaS -->
+        <div class="project-card proj-item project-wide">
+          <div class="proj-head">
+            <i class="fa-solid fa-wand-magic-sparkles project-icon"></i>
+            <div class="proj-status">In development</div>
+          </div>
+          <div class="project-title">Salon SaaS &mdash; booking with an AI assistant</div>
+          <div class="project-desc">A booking platform for independent salons: public booking links that drop straight
+            into a Google Business listing, a <strong>RAG-based chatbot</strong> that answers customer questions from the
+            salon's own data, <strong>MCP tools</strong> that expose stylist and availability data to AI assistants, and
+            a dashboard with two-way feedback between salon and client.</div>
+          <div class="tl-badges">
+            <span class="tl-badge">React</span><span class="tl-badge">TypeScript</span>
+            <span class="tl-badge">NestJS</span><span class="tl-badge">PostgreSQL</span>
+            <span class="tl-badge">RAG</span><span class="tl-badge">MCP</span>
+          </div>
+        </div>
+
         <!-- Push Notifications SNS -->
         <div class="project-card proj-item">
           <i class="fa-solid fa-bell project-icon"></i>
           <div class="project-title">Push Notifications via AWS SNS</div>
-          <div class="project-desc">Cross-platform push notification system using Amazon SNS. Handles device token
-            registration and targeted push delivery.</div>
+          <div class="project-desc">Cross-platform push notification service built on Amazon SNS, handling device token
+            registration and targeted delivery.</div>
           <div class="project-links">
             <a href="https://github.com/smitmnirmal/PushNotification" target="_blank" class="btn-glass"><i
                 class="fa-brands fa-github"></i> GitHub</a>
           </div>
         </div>
 
-        <!-- Slot Machine API -->
-        <div class="project-card proj-item">
-          <i class="fa-solid fa-coins project-icon"></i>
-          <div class="project-title">Slot Machine API</div>
-          <div class="project-desc">RESTful API backend for a slot machine game built with C# and .NET Core, featuring
-            game logic and payout calculations.</div>
+        <!-- More on GitHub -->
+        <div class="project-card proj-item project-more">
+          <i class="fa-brands fa-github project-icon"></i>
+          <div class="project-title">More on GitHub</div>
+          <div class="project-desc">Earlier work, including a .NET Core slot machine API and a full-stack university
+            admission system with role-based access and an Angular dashboard.</div>
           <div class="project-links">
-            <a href="https://github.com/smitmnirmal/slot-machine-api" target="_blank" class="btn-glass"><i
-                class="fa-brands fa-github"></i> GitHub</a>
+            <a href="https://github.com/smitmnirmal" target="_blank" class="btn-glass"><i
+                class="fa-brands fa-github"></i> View all repos</a>
           </div>
         </div>
-
-        <!-- Admit Decision System -->
-        <div class="project-card proj-item">
-          <i class="fa-solid fa-graduation-cap project-icon"></i>
-          <div class="project-title">Admit Decision System</div>
-          <div class="project-desc">Full-stack university admission management system with role-based access control and
-            an Angular dashboard frontend.</div>
-          <div class="project-links">
-            <a href="https://github.com/smitmnirmal/AdmitDecisionSystem" target="_blank" class="btn-glass"><i
-                class="fa-brands fa-github"></i> GitHub</a>
-          </div>
-        </div>
-
       </div>
     </div>
   </section>
@@ -618,8 +820,8 @@
       const world = engine.world;
 
       const skills = [
-        "Java", "Kotlin", "Node.js", "Spring Boot", "PostgreSQL", "Redis",
-        "TypeScript", "React", "Angular", "HTML/CSS", "AWS", "Docker", "Kubernetes", "React Native", "Datadog", "Argo CD"
+        "Kotlin", "Java", "TypeScript", "Spring Boot", "Ktor", "React", "Vue.js", "Angular",
+        "React Native", "Node.js", "PostgreSQL", "Kafka", "AWS", "Docker", "Kubernetes", "Terraform", "Datadog", "RAG", "MCP"
       ];
 
       const htmlBodies = [];
